@@ -215,7 +215,6 @@ set $ws9 "9:Video "
 set $ws10 "10:Desktop "
 
 # 指定工作区间打开应用
-assign [class="URxvt"] $ws1
 assign [class="netease-cloud-music"] $ws8
 assign [class="wechat"] $ws9
 assign [class="youdao-dict"] $ws10
@@ -229,8 +228,8 @@ for_window [class="youdao-dict"] floating enable
 # 设置焦点是否跟随鼠标移动 yes|no
 focus_follows_mouse yes
 # 浮动窗口大小
-floating_minimum_size	700 x 400
-floating_maximum_size	700 x 400
+floating_minimum_size	900 x 500
+floating_maximum_size	900 x 500
 # 工作区间分屏方向 horizontal(垂直) | vertical(水平) | auto(自动)
 default_orientation auto
 # 默认新容器的布局 default(平铺) | stacked(堆积) | tabbed(标签) 
@@ -247,7 +246,10 @@ hide_edge_borders none
 # 锁屏, 直接输入密码解锁
 bindsym $mod+Shift+x exec i3lock
 # 打开 PDF 阅读器
-bindsym Ctrl+$Mod+d exec evince &>/dev/null&
+bindsym Ctrl+$mod+d exec evince &>/dev/null&
+# 打开文件管理器, 需安装对应程序
+# bindsym Ctrl+$mod+f exec pcmanfm &>/dev/null&
+# bindsym Ctrl+$mod+f exec thunar &>/dev/null&
 
 # 截取焦点屏幕
 bindsym Print exec scrot -u '%Y%m%d_%H%M%S.png' -e 'mv $f ~/Picture/shots/'
@@ -330,6 +332,7 @@ client.background       $background
 
 
 # exec --no-startup-id compton --config ~/.config/i3/compton.conf -bc 
+# exec --no-startup-id ss-qt5
 exec --no-startup-id compton -bc 
 exec --no-startup-id fcitx
 exec_always --no-startup-id feh --bg-scale "/home/sontek/Picture/wallpaper/1.jpg"
