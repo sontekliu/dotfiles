@@ -12,19 +12,17 @@
 !urxvt 配置
 !!$HOME/.Xresources
 URxvt.preeditType:Root
-! Sogou入法设置
-! URxvt.inputMethod:fcitx
 URxvt.termName: rxvt-unicode
 URxvt.geometry: 95x35+200+120
-URxvt.visualBell: false
+URxvt.visualBell: False
 URxvt.title:sontek-urxvt-unicode
 
 !! coding
-URxvt.multichar_encoding:   utf-8
+URxvt.multichar_encoding:   UTF-8
 URxvt.imLocale:             zh_CN.UTF-8
 
 ! 透明设置
-URxvt.transparent:true
+URxvt.transparent: True
 URxvt.transparency: 255
 URxvt.inheritPixmap:true
 URxvt.shading:100
