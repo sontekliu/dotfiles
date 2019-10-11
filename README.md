@@ -15,6 +15,8 @@ $ sudo pacman -S compton	# 透明设置
 $ sudo pacman -S rofi		# 应用程序启动器
 $ sudo pacman -S ranger		# 基于终端的文件管理器
 $ sudo pacman -S alsa-utils	# 声音设置
+$ sudo pacman -S vlc        # 视频播放软件
+$ sudo pacman -S mplayer    # 音频播放软件
 
 # urxvt 相关
 $ sudo pacman -S rxvt-unicode	
@@ -42,6 +44,8 @@ $ sudo pacman -S shadowsocks-qt5 # 科学上网
 $ sudo pacman -S conky
 $ sudo pacman -S gvfs-mtp	# 查看挂载的U盘等设备，结合 thunar 一起使用
 $ sudo pacman -S leafpad	# 文本编辑器，可粘帖复制
+$ sudo pacman -S xcompmgr   # 混合器
+$ sudo pacman -S xarchiver  # 解压工具
 ```
 
 
