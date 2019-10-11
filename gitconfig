@@ -1,0 +1,17 @@
+[user]
+	name = sontek
+	email = sontek@yeah.net
+[color]
+	diff = auto
+	ui = true
+	status = auto
+	branch = auto
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[alias]
+	ci = commit
+	br = branch
+	st = status
+	co = checkout
