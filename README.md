@@ -22,6 +22,11 @@ $ sudo pacman -S urxvt-perls
 $ yaourt font-size
 $ yaourt urxvt-fullscreen
 
+# 安装字体
+$ sudo pacman -S ttf-liberation
+$ sudo pacman -S adobe-source-han-sans-cn-fonts
+$ sudo pacman -S adobe-source-han-sans-tw-fonts
+$ sudo pacman -S adobe-source-han-sans-jp-fonts
 
 
 $ git clone git@github.com:ForAwesome/Font-Awesome.git ~/.fonts/
@@ -37,4 +42,7 @@ $ sudo pacman -S dmenu		# 应用程序启动器
 $ sudo pacman -S shadowsocks-qt5 # 科学上网
 $ sudo pacman -S conky
 $ sudo pacman -S gvfs-mtp	# 查看挂载的U盘等设备，结合 thunar 一起使用
+$ sudo pacman -S leafpad	# 文本编辑器，可粘帖复制
 ```
+
+
