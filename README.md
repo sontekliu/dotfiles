@@ -48,4 +48,12 @@ $ sudo pacman -S xcompmgr   # 混合器
 $ sudo pacman -S xarchiver  # 解压工具
 ```
 
+### 未完成
+
+* 配置启动模式，快速启动软件
+* 快捷键启动软件
+* 文件管理器 nautilus
+* i3bar  polybar
+* 开机启动
+* 睡眠
 
