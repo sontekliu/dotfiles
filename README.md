@@ -30,6 +30,13 @@ $ sudo pacman -S adobe-source-han-sans-cn-fonts
 $ sudo pacman -S adobe-source-han-sans-tw-fonts
 $ sudo pacman -S adobe-source-han-sans-jp-fonts
 
+# 安装 polybar
+$ yaourt -S ttf-unifont
+$ yaourt -S siji-git
+$ yaourt -S xorg-fonts-misc 
+$ yaourt -S ttf-material-icons
+$ yaourt -S polybar
+
 $ git clone https://github.com/FortAwesome/Font-Awesome.git ~/.fonts
 ```
 
@@ -57,3 +64,8 @@ $ sudo pacman -S xarchiver  # 解压工具
 * 开机启动
 * 睡眠
 
+```shell
+$ mkdir -pv ~/.config/polybar
+$ cp /usr/share/doc/polybar/config  ~/.config/polybar/config
+$ polybar example
+```
