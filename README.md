@@ -1,4 +1,3 @@
-
 # Archlinux 美化
 
 ### 1. 软件安装
@@ -9,6 +8,7 @@
 $ sudo pacman -S i3wm		# i3wm
 $ sudo pacman -S i3-gaps	# 设置窗口间隔
 $ sudo pacman -S i3lock		# 锁屏
+$ sudo pacman -S neovim     # vim 替代品
 $ sudo pacman -S feh		# 桌面
 $ sudo pacman -S scrot		# 截图
 $ sudo pacman -S compton	# 透明设置
@@ -28,8 +28,7 @@ $ sudo pacman -S adobe-source-han-sans-cn-fonts
 $ sudo pacman -S adobe-source-han-sans-tw-fonts
 $ sudo pacman -S adobe-source-han-sans-jp-fonts
 
-
-$ git clone git@github.com:ForAwesome/Font-Awesome.git ~/.fonts/
+$ git clone https://github.com/FortAwesome/Font-Awesome.git ~/.fonts
 ```
 
 * 可选软件
