@@ -24,7 +24,7 @@ URxvt.imLocale:             zh_CN.UTF-8
 ! 透明设置
 URxvt.transparent: True
 URxvt.transparency: 255
-URxvt.inheritPixmap:true
+URxvt.inheritPixmap: True
 URxvt.shading:100
 !! 括号内表示透明度
 URxvt.depth:32
@@ -87,8 +87,8 @@ URxvt.color15:#EEEEEC
 
 !! 字体设置
 Xft.dpi:96
-URxvt.font:             xft:Monaco:size=12:antialias=true
-URxvt.boldFont:         xft:Monaco:bold:size=12:antialias=true
+URxvt.font:             xft:Monaco:size=12:antialias=True
+URxvt.boldFont:         xft:Monaco:bold:size=12:antialias=True
 URxvt.letterSpace:              0
 URxvt.linespace:                10
 !!滚动条设置
@@ -113,7 +113,8 @@ URxvt.perl-ext-common: default,matcher,font-size,clipboard,url-select,keyboard-s
 URxvt.urlLauncher:              google-chrome-stable
 URxvt.matcher.button:           1
 URxvt.url-select.lanucher:      google-chrome-stable
-URxvt.url-select.underline:     true
+URxvt.url-select.underline:     True
+URxvt.perl-ext-common:          True
 URxvt.keysym.C-u:               perl:url-select:select_next
 URxvt.keysym.C-Escape:          perl:keyboard-select:activate
 URxvt.keysym.C-s:               perl:keyboard-select:search
@@ -153,3 +154,4 @@ rofi.columns: 2
 rofi.padding: 5
 rofi.fixed-num-lines: true
 rofi.hide-scrollbar: true
+

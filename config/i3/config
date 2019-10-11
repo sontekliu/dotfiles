@@ -183,6 +183,10 @@ bar {
 
 #################### My Custom Config ##############################
 
+######################################
+# 变量设置区域
+######################################
+
 # 设置颜色变量 
 set $background #272827
 set $foreground #657b83
@@ -215,6 +219,10 @@ set $ws8 "8:Music "
 set $ws9 "9:Video "
 set $ws10 "10:Desktop "
 
+######################################
+# 基本设置模块
+######################################
+
 # 指定工作区间打开应用
 assign [class="netease-cloud-music"] $ws8
 assign [class="wechat"] $ws9
@@ -244,6 +252,11 @@ new_float pixel 1
 # 隐藏相接的两个窗口之间的边框 none | vertical | horizontal | both | smart
 hide_edge_borders none
 
+
+######################################
+# 快捷键设置模块
+######################################
+
 # 锁屏, 直接输入密码解锁
 bindsym $mod+Shift+x exec i3lock
 # 打开 PDF 阅读器
@@ -267,7 +280,12 @@ bindsym $mod+b    border toggle
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
-# i3-gaps config
+# 隐藏窗口
+bindsym $mod+Shift+minus move scratchpad
+# 显示被隐藏的窗口
+bindsym $mod+minus scratchpad show
+
+################## i3-gaps config   ####################
 gaps inner 8
 gaps outer 10
 smart_gaps on
@@ -309,7 +327,7 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-# 开关机管理 
+############  开关机管理 ########################
 set $mode_system  lock(L) logout(O) reboot(R) shutdown(S) exit(Esc)
 bindsym $mod+c mode "$mode_system"
 mode "$mode_system" {
@@ -323,6 +341,7 @@ mode "$mode_system" {
     bindsym $mod+c mode "default"
 }
 
+################### 外观设置模块  #############################
 # class                 border          background          text        indicator   child_border
 client.focused          $foreground     $background     $foreground     $color2     $color2
 client.focused_inactive $foreground     $background     $foreground     $color4     $color4
@@ -332,8 +351,16 @@ client.placeholder      $foreground     $background     $foreground     $color4 
 client.background       $background
 
 
+############################################
+#    开机启动模块
+############################################
+
 # exec --no-startup-id compton --config ~/.config/i3/compton.conf -bc 
 # exec --no-startup-id ss-qt5
+# 去掉屏保功能，将黑屏等待时间置为100分钟
+exec --no-startup-id xset s 0
+exec --no-startup-id xset dpms 6000 8000 9000
+
 exec --no-startup-id compton -bc 
 exec --no-startup-id fcitx
 exec_always --no-startup-id feh --bg-scale "/home/sontek/.config/wallpapper/1.jpg"
