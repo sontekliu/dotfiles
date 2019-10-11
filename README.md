@@ -45,6 +45,7 @@ $ git clone https://github.com/FortAwesome/Font-Awesome.git ~/.fonts
 ```shell
 $ sudo pacman -S pcmanfm	# 文件管理器
 $ sudo pacman -S thunar		# 文件管理器
+$ sudo pacman -S nautilus   # 文件管理器
 $ sudo pacman -S evince		# PDF 阅读器
 $ sudo pacman -S dmenu		# 应用程序启动器
 $ sudo pacman -S shadowsocks-qt5 # 科学上网
