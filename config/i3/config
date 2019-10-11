@@ -335,4 +335,4 @@ client.background       $background
 # exec --no-startup-id ss-qt5
 exec --no-startup-id compton -bc 
 exec --no-startup-id fcitx
-exec_always --no-startup-id feh --bg-scale "/home/sontek/.config/wallpaper/1.jpg"
+exec_always --no-startup-id feh --bg-scale "/home/sontek/.config/wallpapper/1.jpg"
