@@ -12,19 +12,21 @@
 !urxvt 配置
 !!$HOME/.Xresources
 URxvt.preeditType:Root
+! Sogou入法设置
+! URxvt.inputMethod:fcitx
 URxvt.termName: rxvt-unicode
 URxvt.geometry: 95x35+200+120
-URxvt.visualBell: False
+URxvt.visualBell: false
 URxvt.title:sontek-urxvt-unicode
 
 !! coding
-URxvt.multichar_encoding:   UTF-8
+URxvt.multichar_encoding:   utf-8
 URxvt.imLocale:             zh_CN.UTF-8
 
 ! 透明设置
-URxvt.transparent: True
+URxvt.transparent:true
 URxvt.transparency: 255
-URxvt.inheritPixmap: True
+URxvt.inheritPixmap:true
 URxvt.shading:100
 !! 括号内表示透明度
 URxvt.depth:32
@@ -87,8 +89,15 @@ URxvt.color15:#EEEEEC
 
 !! 字体设置
 Xft.dpi:96
-URxvt.font:             xft:Monaco:size=12:antialias=True
-URxvt.boldFont:         xft:Monaco:bold:size=12:antialias=True
+URxvt.font:xft:Literation Mono Powerline:size=12:style=Medium,\
+	xft:WenQuanYi Zen Hei:style=Regular:size=12, \
+	xft:FreeSerif:style=Regular:size=12, \
+	xft:Unifont:style=Medium:antialias=false:size=12, \
+	xft:Hack:style=Medium:antialias=false:size=12, \
+	xft:FontAwesome:style=Medium:antialias=false:size=12
+
+! URxvt.font:             xft:Monaco:size=12:antialias=true
+URxvt.boldFont:         xft:Monaco:bold:size=12:antialias=true
 URxvt.letterSpace:              0
 URxvt.linespace:                10
 !!滚动条设置
@@ -113,8 +122,7 @@ URxvt.perl-ext-common: default,matcher,font-size,clipboard,url-select,keyboard-s
 URxvt.urlLauncher:              google-chrome-stable
 URxvt.matcher.button:           1
 URxvt.url-select.lanucher:      google-chrome-stable
-URxvt.url-select.underline:     True
-URxvt.perl-ext-common:          True
+URxvt.url-select.underline:     true
 URxvt.keysym.C-u:               perl:url-select:select_next
 URxvt.keysym.C-Escape:          perl:keyboard-select:activate
 URxvt.keysym.C-s:               perl:keyboard-select:search
@@ -154,4 +162,3 @@ rofi.columns: 2
 rofi.padding: 5
 rofi.fixed-num-lines: true
 rofi.hide-scrollbar: true
-

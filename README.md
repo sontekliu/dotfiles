@@ -8,7 +8,7 @@
 $ sudo pacman -S i3wm		# i3wm
 $ sudo pacman -S i3-gaps	# 设置窗口间隔
 $ sudo pacman -S i3lock		# 锁屏
-$ sudo pacman -S neovim     # vim 替代品
+$ sudo pacman -S neovim     	# vim 替代品
 $ sudo pacman -S feh		# 桌面
 $ sudo pacman -S scrot		# 截图
 $ sudo pacman -S compton	# 透明设置
@@ -31,10 +31,18 @@ $ sudo pacman -S adobe-source-han-sans-tw-fonts
 $ sudo pacman -S adobe-source-han-sans-jp-fonts
 
 # 安装 polybar
-$ yaourt -S polybar-git
+$ sudo pacman -S mpd
+$ sudo pacman -S bspwm
+$ sudo pacman -S pluseaudio
 $ yaourt -S ttf-unifont
 $ yaourt -S siji-git
 $ yaourt -S xorg-fonts-misc 
+$ yaourt -S polybar-git
+
+$ mkdir -pv ~/.config/polybar
+$ install -Dm644  /usr/share/doc/polybar/config  ~/.config/polybar/config
+$ cp /usr/share/doc/polybar/config  ~/.config/polybar/config
+$ polybar example
 
 $ git clone https://github.com/FortAwesome/Font-Awesome.git ~/.fonts
 ```
@@ -62,9 +70,3 @@ $ sudo pacman -S xarchiver  # 解压工具
 * i3bar  polybar
 * 开机启动
 
-```shell
-$ mkdir -pv ~/.config/polybar
-$ install -Dm644  /usr/share/doc/polybar/config  ~/.config/polybar/config
-$ cp /usr/share/doc/polybar/config  ~/.config/polybar/config
-$ polybar example
-```
