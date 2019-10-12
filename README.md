@@ -15,8 +15,9 @@ $ sudo pacman -S compton	# 透明设置
 $ sudo pacman -S rofi		# 应用程序启动器
 $ sudo pacman -S ranger		# 基于终端的文件管理器
 $ sudo pacman -S alsa-utils	# 声音设置
-$ sudo pacman -S vlc        # 视频播放软件
-$ sudo pacman -S mplayer    # 音频播放软件
+$ sudo pacman -S vlc        	# 视频播放软件
+$ sudo pacman -S mplayer    	# 音频播放软件
+$ sudo pacman -S xorg-xrandr	# 分辨率
 
 # urxvt 相关
 $ sudo pacman -S rxvt-unicode	
