@@ -79,3 +79,8 @@ $ sudo pacman -S screenkey  # 显示输入命令
 * i3bar i3status
 * 开机启动
 
+sudo dd if=ISO_PATH of=/dev/USB_DEV bs=4M
+example
+
+sudo dd if=./manjaro-i3-18.1.0-x86_64.iso of=/dev/sdb bs=4M
+
