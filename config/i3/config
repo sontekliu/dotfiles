@@ -201,7 +201,7 @@ bar {
     workspace_buttons yes
     height 40
     colors {
-        background #010101
+        background #454545
         statusline #ffffff
         separator #ffffff
         
@@ -388,13 +388,13 @@ client.background       $background
 #    开机启动模块
 ############################################
 
-# exec --no-startup-id compton --config ~/.config/i3/compton.conf -bc 
+exec --no-startup-id compton --config ~/.config/i3/compton.conf -bc 
+# exec --no-startup-id compton -bc 
 # exec --no-startup-id ss-qt5
 # 去掉屏保功能，将黑屏等待时间置为100分钟
 exec --no-startup-id xset s 0
 exec --no-startup-id xset dpms 6000 8000 9000
 
-exec --no-startup-id compton -bc 
 exec --no-startup-id fcitx
 exec_always --no-startup-id feh --bg-scale "/home/sontek/.config/wallpaper/1.jpg"
 
