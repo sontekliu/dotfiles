@@ -25,6 +25,7 @@ $ yaourt font-size
 $ yaourt urxvt-fullscreen
 
 # 安装字体
+$ sudo pacman -S ttf-font-awesome
 $ sudo pacman -S ttf-liberation
 $ sudo pacman -S adobe-source-han-sans-cn-fonts
 $ sudo pacman -S adobe-source-han-sans-tw-fonts

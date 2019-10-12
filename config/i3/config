@@ -177,9 +177,42 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-# bar {
-    	# status_command i3status
-# }
+bar {
+	# status_command i3status
+    status_command i3status --config ~/.config/i3/i3status.conf
+    # 显示模式  dock|hide|invisible
+    # dock:一直停靠，hide:通过按键显示和隐藏,invisible:强制隐藏
+    mode dock
+    # hidden_state hide
+    # modifier $mod
+    # 显示位置 top|buttom
+	position bottom
+    # 分隔符
+    separator_symbol "|"
+    # 托盘输出显示 none|primary|<output>
+    # tray_output HDMI2
+    tray_output primary
+    # 托盘内容之间的间距
+    tray_padding 3
+    i3bar_command /usr/bin/i3bar
+    # 设置字体
+    font pango:Monaco 14
+    # 显示工作区安妮
+    workspace_buttons yes
+    height 40
+    colors {
+        background #010101
+        statusline #ffffff
+        separator #ffffff
+        
+        # colorclass        border      background     text
+        focused_workspace   #9D6A47      #9D6A47     #ffffff
+        active_workspace    #333333      #787878     #ffffff
+        inactive_workspace  #333333      #787878     #ffffff
+        urgent_workspace    #2f343a      #787878     #ffffff
+        binding_mode        #2f343a      #787878     #ffffff
+    }
+}
 
 #################### My Custom Config ##############################
 
@@ -363,5 +396,5 @@ exec --no-startup-id xset dpms 6000 8000 9000
 
 exec --no-startup-id compton -bc 
 exec --no-startup-id fcitx
-exec_always --no-startup-id feh --bg-scale "/home/sontek/.config/wallpapper/1.jpg"
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id feh --bg-scale "/home/sontek/.config/wallpaper/1.jpg"
+

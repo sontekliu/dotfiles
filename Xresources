@@ -89,12 +89,13 @@ URxvt.color15:#EEEEEC
 
 !! 字体设置
 Xft.dpi:96
-URxvt.font:xft:Literation Mono Powerline:size=12:style=Medium,\
-	xft:WenQuanYi Zen Hei:style=Regular:size=12, \
-	xft:FreeSerif:style=Regular:size=12, \
-	xft:Unifont:style=Medium:antialias=false:size=12, \
-	xft:Hack:style=Medium:antialias=false:size=12, \
-	xft:FontAwesome:style=Medium:antialias=false:size=12
+URxvt.font:xft:Monaco:size=12:antialias=true,\
+    xft:Literation Mono Powerline:size=12:style=Medium:antialias=true,\
+	xft:WenQuanYi Zen Hei:style=Regular:size=12:antialias=true, \
+	xft:FreeSerif:style=Regular:size=12:antialias=true, \
+	xft:Unifont:style=Medium:antialias=true:size=12, \
+	xft:Hack:style=Medium:antialias=true:size=12, \
+	xft:FontAwesome:style=Medium:antialias=true:size=12
 
 ! URxvt.font:             xft:Monaco:size=12:antialias=true
 URxvt.boldFont:         xft:Monaco:bold:size=12:antialias=true

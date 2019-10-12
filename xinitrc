@@ -46,5 +46,6 @@ export LANG=zh_CN.UTF-8
 export LANGUAGE=zh_CN:en_US
 export LC_TYPE=zh_CN.UTF-8
 
-exec i3 -V >> ~/.config/i3/log/i3log-$(date + '%F-%k-%M-%S') 2>&1
+# exec i3 -V >> ~/.config/i3/log/i3log-$(date + '%F-%k-%M-%S') 2>&1
+exec i3 
 
