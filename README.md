@@ -18,6 +18,8 @@ $ sudo pacman -S alsa-utils	# 声音设置
 $ sudo pacman -S vlc        	# 视频播放软件
 $ sudo pacman -S mplayer    	# 音频播放软件
 $ sudo pacman -S xorg-xrandr	# 分辨率
+$ sudo pacman -S tmux		# tmux
+$ sudo pacman -S variety	# 设置壁纸
 
 # urxvt 相关
 $ sudo pacman -S rxvt-unicode	
@@ -31,6 +33,10 @@ $ sudo pacman -S ttf-liberation
 $ sudo pacman -S adobe-source-han-sans-cn-fonts
 $ sudo pacman -S adobe-source-han-sans-tw-fonts
 $ sudo pacman -S adobe-source-han-sans-jp-fonts
+$ sudo pacman -S wqy-bitmapfont
+$ sudo pacman -S wqy-microhei
+$ sudo pacman -S wqy-zenhei
+$ sudo pacman -S nerd-fonts-complete
 
 # 安装 polybar
 $ sudo pacman -S mpd
@@ -63,12 +69,13 @@ $ sudo pacman -S gvfs-mtp	# 查看挂载的U盘等设备，结合 thunar 一起�
 $ sudo pacman -S leafpad	# 文本编辑器，可粘帖复制
 $ sudo pacman -S xcompmgr   # 混合器
 $ sudo pacman -S xarchiver  # 解压工具
+$ sudo pacman -S screenkey  # 显示输入命令
 ```
 
 ### 未完成
 
 * 配置启动模式，快速启动软件
 * 快捷键启动软件
-* i3bar  polybar
+* i3bar i3status
 * 开机启动
 
