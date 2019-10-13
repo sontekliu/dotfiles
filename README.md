@@ -20,6 +20,7 @@ $ sudo pacman -S mplayer    	# 音频播放软件
 $ sudo pacman -S xorg-xrandr	# 分辨率
 $ sudo pacman -S tmux		# tmux
 $ sudo pacman -S variety	# 设置壁纸
+$ sudo pacman -S alacritty	# 终端模拟器
 
 # urxvt 相关
 $ sudo pacman -S rxvt-unicode	
