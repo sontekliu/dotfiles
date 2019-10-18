@@ -37,6 +37,7 @@
 | 4     | Ctrl + b ; | 当前 Pane 和上一 Pane 之间切换  |
 | 5     | Ctrl + b x | 关闭当前 Panel                  |
 | 6     | Ctrl + b q | 显示 Panel 编号                 |
+| 7     | Ctrl + b z | Pane 全屏切换                   |
 
 
 [参考资料]
