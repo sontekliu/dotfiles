@@ -38,6 +38,8 @@
 | 5     | Ctrl + b x | 关闭当前 Panel                  |
 | 6     | Ctrl + b q | 显示 Panel 编号                 |
 | 7     | Ctrl + b z | Pane 全屏切换                   |
+| 8     | Ctrl + b t | 显示时间                        |
+
 
 
 [参考资料]

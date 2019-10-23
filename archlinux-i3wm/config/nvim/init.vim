@@ -318,7 +318,14 @@ let g:vim_markdown_new_list_item_indent = 4
 " 3. 存储文档时更新
 let g:instant_markdown_slow = 1
 " 自动启动浏览器, :InstantMarkdownPreview，也可以启动
-let g:instant_markdown_autostart = 1
+let g:instant_markdown_autostart = 0
+map <leader>v :InstantMarkdownPreview<CR>
+" 开放给网络上的其他人
+let g:instant_markdown_open_to_the_world = 1
+" 允许脚本允许
+let g:instant_markdown_allow_unsafe_content = 1
+" 阻止外部资源加载
+let g:instant_markdown_allow_external_content = 0
 
 
 " vim-table-mode start 
