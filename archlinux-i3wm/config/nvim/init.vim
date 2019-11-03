@@ -2,7 +2,9 @@
 set nocompatible
 filetype off
 call plug#begin('~/.vim/plugged')
+" vim 文档
 Plug 'vimcn/vimcdoc'
+" 状态栏
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " markdown 语法高亮
@@ -10,15 +12,20 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 " markdown 实时预览
 Plug 'suan/vim-instant-markdown'
+" markdown 快速编辑表格
 Plug 'dhruvasagar/vim-table-mode'
+" Vim 快速移动
+Plug 'easymotion/vim-easymotion'
+" 缩进分隔线
+Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdcommenter'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'ryanoasis/vim-devicons'
  " Plug 'kien/ctrlp.vim'
  " Plug 'elzr/vim-json'
@@ -46,7 +53,6 @@ Plug 'ryanoasis/vim-devicons'
  " Plug 'fholgado/minibufexpl.vim'
  " Plug 'gcmt/wildfire.vim'
  " Plug 'sjl/gundo.vim'
- " Plug 'Lokaltog/vim-easymotion'
  " Plug 'lilydjwg/fcitx.vim'
  " Plug 'rudes/vim-java'
  " Plug 'vim-scripts/taglist.vim'
@@ -77,7 +83,7 @@ endif
 """"""""""""""""""""""""""""""
 " 颜色配置
 """"""""""""""""""""""""""""""
-" set t_Co=256
+set t_Co=256
 let &t_ut=''
 set background=dark
 " 启动代码高亮
@@ -109,7 +115,7 @@ set helplang=cn
 """""""""""""""""""""""""""""
 " 显示行好
 set number
-set relativenumber
+" set relativenumber
 " 行号的宽度
 set numberwidth=4
 " 底部 bar 显示最后执行的命令
@@ -347,6 +353,13 @@ inoreabbrev <expr> __
           \ <SID>isAtStartOfLine('__') ?
           \ '<c-o>:silent! TableModeDisable<cr>' : '__'
 " vim-table-mode end
+
+
+" ==
+" ==  vim-easymotion config 
+" ==
+
+nmap ss <Plug>(easymotion-s2)
 
 " NERDTree start
 " 定义快捷键
