@@ -247,7 +247,7 @@ set $ws3 "3:Code "
 set $ws4 "4:Vim "
 set $ws5 "5:Github "
 set $ws6 "6:Email "
-set $ws7 "7:Image 
+set $ws7 "7:Image "
 set $ws8 "8:Music "
 set $ws9 "9:Video "
 set $ws10 "10:Desktop "
