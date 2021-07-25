@@ -404,7 +404,7 @@ client.background       $background
 exec --no-startup-id xset s 0
 exec --no-startup-id xset dpms 6000 8000 9000
 
-# exec_always --no-startup-id picom -bo 1.0
+exec_always --no-startup-id picom -bo 1.0
 exec_always --no-startup-id fcitx
 exec_always --no-startup-id feh --bg-scale "/home/sontek/.config/wallpaper/1.jpg"
 
