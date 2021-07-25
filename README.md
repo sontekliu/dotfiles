@@ -11,7 +11,7 @@ $ sudo pacman -S i3lock		# 锁屏
 $ sudo pacman -S neovim     	# vim 替代品
 $ sudo pacman -S feh		# 桌面
 $ sudo pacman -S scrot		# 截图
-$ sudo pacman -S compton	# 透明设置
+$ sudo pacman -S picom		# 透明设置
 $ sudo pacman -S rofi		# 应用程序启动器
 $ sudo pacman -S ranger		# 基于终端的文件管理器
 $ sudo pacman -S alsa-utils	# 声音设置
@@ -62,16 +62,16 @@ $ git clone https://github.com/FortAwesome/Font-Awesome.git ~/.fonts
 ```shell
 $ sudo pacman -S pcmanfm	# 文件管理器
 $ sudo pacman -S thunar		# 文件管理器
-$ sudo pacman -S nautilus   # 文件管理器
+$ sudo pacman -S nautilus       # 文件管理器
 $ sudo pacman -S evince		# PDF 阅读器
 $ sudo pacman -S dmenu		# 应用程序启动器
 $ sudo pacman -S shadowsocks-qt5 # 科学上网
 $ sudo pacman -S conky
 $ sudo pacman -S gvfs-mtp	# 查看挂载的U盘等设备，结合 thunar 一起使用
 $ sudo pacman -S leafpad	# 文本编辑器，可粘帖复制
-$ sudo pacman -S xcompmgr   # 混合器
-$ sudo pacman -S xarchiver  # 解压工具
-$ sudo pacman -S screenkey  # 显示输入命令
+$ sudo pacman -S xcompmgr   	# 混合器
+$ sudo pacman -S xarchiver  	# 解压工具
+$ sudo pacman -S screenkey  	# 显示输入命令
 ```
 
 ### 未完成

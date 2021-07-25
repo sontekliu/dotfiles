@@ -14,7 +14,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:ttf-liberation-sans 14
-font pango:monospace 12
+font pango:monospace 20
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -32,11 +32,12 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
+# set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -44,18 +45,16 @@ floating_modifier $mod
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 # bindsym $mod+Return exec gnome-terminal
-bindsym $mod+Return exec urxvt -sh 20
+# bindsym $mod+Return exec urxvt -sh 20
+bindsym $mod+Return exec st
+# bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec rofi -show run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec rofi -show run -font "Noto Sans 20"
 
 # change focus
 bindsym $mod+j focus left
@@ -178,39 +177,49 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	# status_command i3status
-    status_command i3status --config ~/.config/i3/i3status.conf
+    # 设置字体
+    font pango:Monaco 12
+    i3bar_command /usr/bin/i3bar
+    # status_command i3status --config ~/.config/i3/i3status.conf
+    # status_command i3status
+    status_command i3blocks 
+    # 显示位置 top|buttom
+    position top
     # 显示模式  dock|hide|invisible
     # dock:一直停靠，hide:通过按键显示和隐藏,invisible:强制隐藏
     mode dock
     # hidden_state hide
     # modifier $mod
-    # 显示位置 top|buttom
-	position bottom
     # 分隔符
-    separator_symbol "|"
+    separator_symbol " "
     # 托盘输出显示 none|primary|<output>
     # tray_output HDMI2
     tray_output primary
     # 托盘内容之间的间距
     tray_padding 3
-    i3bar_command /usr/bin/i3bar
-    # 设置字体
-    font pango:Monaco 14
-    # 显示工作区安妮
+    # 显示工作区按钮
     workspace_buttons yes
-    height 40
+    height 50
     colors {
         background #454545
         statusline #ffffff
         separator #ffffff
-        
         # colorclass        border      background     text
         focused_workspace   #9D6A47      #9D6A47     #ffffff
         active_workspace    #333333      #787878     #ffffff
         inactive_workspace  #333333      #787878     #ffffff
         urgent_workspace    #2f343a      #787878     #ffffff
         binding_mode        #2f343a      #787878     #ffffff
+
+        # background #282A36
+        # statusline #F8F8F2
+        # separator #44475A
+        # # colorclass        border      background     text
+        # focused_workspace   #44475A      #44475A     #F8F8F2
+        # active_workspace    #282A36      #44475A     #F8F8F2
+        # inactive_workspace  #282A36      #282A36     #BFBFBF
+        # urgent_workspace    #FF5555      #FF5555     #F8F8F2
+        # binding_mode        #FF5555      #FF5555     #F8F8F2
     }
 }
 
@@ -241,16 +250,16 @@ set $color13    #D99F57
 set $color14    #C9A554
 set $color15    #EAD49B
 
-set $ws1 "1:Terminal "
-set $ws2 "2:Chrome "
-set $ws3 "3:Code "
-set $ws4 "4:Vim "
-set $ws5 "5:Github "
-set $ws6 "6:Email "
-set $ws7 "7:Image 
-set $ws8 "8:Music "
-set $ws9 "9:Video "
-set $ws10 "10:Desktop "
+set $ws1 "1: Terminal"
+set $ws2 "2: firefox"
+set $ws3 "3: Code"
+set $ws4 "4: Vim"
+set $ws5 "5: Github"
+set $ws6 "6: Email"
+set $ws7 "7: Image"
+set $ws8 "8: Music"
+set $ws9 "9: Video"
+set $ws10 "10: Desktop"
 
 ######################################
 # 基本设置模块
@@ -270,8 +279,8 @@ for_window [class="youdao-dict"] floating enable
 # 设置焦点是否跟随鼠标移动 yes|no
 focus_follows_mouse yes
 # 浮动窗口大小
-floating_minimum_size	900 x 500
-floating_maximum_size	900 x 500
+floating_minimum_size	1500 x 800
+floating_maximum_size	1500 x 800
 # 工作区间分屏方向 horizontal(垂直) | vertical(水平) | auto(自动)
 default_orientation auto
 # 默认新容器的布局 default(平铺) | stacked(堆积) | tabbed(标签) 
@@ -280,7 +289,8 @@ workspace_layout default
 default_border pixel 1
 new_window pixel 1
 new_float pixel 1
-# default_floating_border pixel 10 好像不起作用
+# 好像不起作用
+default_floating_border pixel 10 
 
 # 隐藏相接的两个窗口之间的边框 none | vertical | horizontal | both | smart
 hide_edge_borders none
@@ -296,7 +306,7 @@ bindsym $mod+Shift+x exec i3lock
 bindsym Ctrl+$mod+d exec evince &>/dev/null&
 # 打开文件管理器, 需安装对应程序
 # bindsym Ctrl+$mod+f exec pcmanfm &>/dev/null&
-# bindsym Ctrl+$mod+f exec thunar &>/dev/null&
+bindsym Ctrl+$mod+f exec thunar &>/dev/null&
 
 # 截取焦点屏幕
 bindsym Print exec scrot -u '%Y%m%d_%H%M%S.png' -e 'mv $f ~/Picture/shots/'
@@ -320,7 +330,7 @@ bindsym $mod+minus scratchpad show
 
 ################## i3-gaps config   ####################
 gaps inner 8
-gaps outer 10
+gaps outer 8
 smart_gaps on
 smart_borders on
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -388,13 +398,11 @@ client.background       $background
 #    开机启动模块
 ############################################
 
-exec --no-startup-id compton --config ~/.config/i3/compton.conf -bc 
-# exec --no-startup-id compton -bc 
-# exec --no-startup-id ss-qt5
 # 去掉屏保功能，将黑屏等待时间置为100分钟
 exec --no-startup-id xset s 0
 exec --no-startup-id xset dpms 6000 8000 9000
 
-exec --no-startup-id fcitx
+exec_always --no-startup-id picom -bo 1.0
+exec_always --no-startup-id fcitx
 exec_always --no-startup-id feh --bg-scale "/home/sontek/.config/wallpaper/1.jpg"
 
