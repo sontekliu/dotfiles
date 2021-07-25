@@ -391,7 +391,7 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 
 
 " nerdtree git plugin start 
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",

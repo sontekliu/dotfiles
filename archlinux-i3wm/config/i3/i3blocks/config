@@ -46,7 +46,7 @@ border_left=0
 
 
 [volume]
-command=~/.config/i3blocks/audio
+command=~/.config/i3/i3blocks/audio
 interval=1
 label=<span color="#FFFF00"> </span>
 border=#FFFF00
@@ -57,7 +57,7 @@ border_left=0
 
 
 [network]
-command=~/.config/i3blocks/network
+command=~/.config/i3/i3blocks/network
 interval=1
 label=<span color="#00ffbb">🌐︁ </span>
 border=#00ffbb

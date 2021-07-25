@@ -46,8 +46,8 @@ floating_modifier $mod
 # bindsym $mod+Return exec i3-sensible-terminal
 # bindsym $mod+Return exec gnome-terminal
 # bindsym $mod+Return exec urxvt -sh 20
-bindsym $mod+Return exec st
-# bindsym $mod+Return exec alacritty
+# bindsym $mod+Return exec st
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -180,9 +180,11 @@ bar {
     # 设置字体
     font pango:Monaco 12
     i3bar_command /usr/bin/i3bar
-    # status_command i3status --config ~/.config/i3/i3status.conf
     # status_command i3status
-    status_command i3blocks 
+    # status_command i3status -c/--config ~/.config/i3status/config
+
+    # status_command i3blocks
+    status_command i3blocks -c ~/.config/i3/i3blocks/config
     # 显示位置 top|buttom
     position top
     # 显示模式  dock|hide|invisible
@@ -402,7 +404,7 @@ client.background       $background
 exec --no-startup-id xset s 0
 exec --no-startup-id xset dpms 6000 8000 9000
 
-exec_always --no-startup-id picom -bo 1.0
+# exec_always --no-startup-id picom -bo 1.0
 exec_always --no-startup-id fcitx
 exec_always --no-startup-id feh --bg-scale "/home/sontek/.config/wallpaper/1.jpg"
 

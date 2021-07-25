@@ -96,47 +96,47 @@ scrolling:
 # Some applications, like Emacs, rely on knowing about the width of a tab.
 # To prevent unexpected behavior in these applications, it's also required to
 # change the `it` value in terminfo when altering this setting.
-tabspaces: 8
+tabspaces: 4
 
 # Font configuration (changes require restart)
 font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    # family: monospace
+    family: monospace
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
 
   # Bold font face
-  #bold:
+  # bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    # family: monospace
 
     # The `style` can be specified to pick a specific face.
     #style: Bold
 
   # Italic font face
-  #italic:
+  italic:
     # Font family
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: monospace
 
     # The `style` can be specified to pick a specific face.
     #style: Italic
 
   # Point size
-  size: 14.0
+  size: 16.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -278,7 +278,7 @@ visual_bell:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.4
+background_opacity: 0.8
 
 # Mouse bindings
 #
@@ -310,7 +310,7 @@ mouse:
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: false
 
-  url:
+  hints:
     # URL launcher
     #
     # This program is executed when clicking on a text which is recognized as a URL.
