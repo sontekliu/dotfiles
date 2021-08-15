@@ -24,7 +24,7 @@ border_left=0
 
 
 [root]
-command=df -h / | awk 'FNR==2 { gsub(/[A-Za-z]/, ""); printf "%i/%i<span color=\"#f1fa8c\"> GB</span>\n", $2, $4 }'
+command=df -h /home | awk 'FNR==2 { gsub(/[A-Za-z]/, ""); printf "%i/%i<span color=\"#f1fa8c\"> GB</span>\n", $2, $4 }'
 interval=3
 label=<span color="#f1fa8c">⛁ </span>
 border=#f1fa8c
