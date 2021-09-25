@@ -274,7 +274,7 @@ assign [class="youdao-dict"] $ws10
 
 # 新窗口默认布局
 # for_window [class="URxvt"] layout tabbed
-for_window [class="wechat"] floating enable 
+for_window [class="flameshot"] floating enable 
 for_window [class="netease-cloud-music"] floating enable 
 for_window [class="youdao-dict"] floating enable 
 
@@ -311,9 +311,9 @@ bindsym Ctrl+$mod+d exec evince &>/dev/null&
 bindsym Ctrl+$mod+f exec thunar &>/dev/null&
 
 # 截取焦点屏幕
-bindsym Print exec scrot -u '%Y%m%d_%H%M%S.png' -e 'mv $f ~/Picture/shots/'
+bindsym Print --release exec /usr/bin/flameshot gui
 # 截全屏
-bindsym $mod+Print exec scrot '%Y%m%d_%H%M%S.png' -e 'mv $f ~/Picture/shots/'
+# bindsym $mod+Print exec scrot '%Y%m%d_%H%M%S.png' -e 'mv $f ~/Picture/shots/'
 
 # 调整边框样式
 bindsym $mod+u    border none
