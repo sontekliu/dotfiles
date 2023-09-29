@@ -26,6 +26,8 @@ opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 opt.smartindent = true
+opt.smarttab = true
+opt.breakindent = true
 
 
 -- 
@@ -70,6 +72,8 @@ opt.sidescrolloff = 10
 --
 -- 命令行高为2，提供足够的显示空间
 opt.cmdheight = 2
+opt.showcmd = true
+opt.laststatus = 2
 -- 右侧参考线，超过表示代码太长了，考虑换行
 opt.colorcolumn = "120"
 -- 禁止折行
@@ -99,4 +103,6 @@ opt.wildmenu = true
 -- Dont' pass messages to |ins-completin menu|
 -- opt.shortmess = vim.o.shortmess .. 'c'
 opt.pumheight = 10
+opt.backupskip = "/tmp/*,/private/tmp/*"
+opt.backspace = "start,eol,indent"
 
