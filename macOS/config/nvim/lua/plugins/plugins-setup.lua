@@ -25,7 +25,8 @@ vim.cmd([[
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use 'folke/tokyonight.nvim' -- 主题
+    -- use 'folke/tokyonight.nvim' -- 主题
+    use 'Mofiqul/dracula.nvim'  -- 主题
     use {
         'nvim-lualine/lualine.nvim',  -- 状态栏
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }  -- 状态栏图标

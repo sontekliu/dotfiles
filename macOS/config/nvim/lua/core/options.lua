@@ -92,10 +92,11 @@ opt.hidden = true
 -- 自动补全不自动选中
 vim.g.completeopt = "menu,menuone,noselect,noinsert"
 -- 不可见字符的显示，这里只把空格显示为一个点
-opt.list = true
-opt.listchars = "space:·"
+-- opt.list = true
+-- opt.listchars = "space:·"
 -- 补全增强
 opt.wildmenu = true
 -- Dont' pass messages to |ins-completin menu|
-opt.shortmess = vim.o.shortmess .. 'c'
+-- opt.shortmess = vim.o.shortmess .. 'c'
 opt.pumheight = 10
+
