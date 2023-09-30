@@ -4,6 +4,11 @@ local keymap = vim.keymap
 
 -- ------------- 插入模式 -------------- --
 -- keymap.set("i", "jk", "<ESC>")
+--禁用上下左右健
+keymap.set({"n", "i"}, "<Left>", "<Nop>")
+keymap.set({"n", "i"}, "<Right>", "<Nop>")
+keymap.set({"n", "i"}, "<Up>", "<Nop>")
+keymap.set({"n", "i"}, "<Down>", "<Nop>")
 
 -- ------------- 视觉模式 -------------- --
 -- 单行或多行移动
@@ -41,7 +46,7 @@ keymap.set("n", "-", "<C-x>")
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- New tab
-keymap.set("n", "te", ":tabedit<CR>", {silent = true})
+keymap.set("n", "te", ":tabedit<CR>", {silent = true}) -- silent 表示左下角不显示执行的命令
 
 -- 取消高亮
 keymap.set("n", "<leader><space>", ":nohl<CR>")

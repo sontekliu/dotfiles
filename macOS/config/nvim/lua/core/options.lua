@@ -1,10 +1,12 @@
 -- :h option-list  查看帮助 
+local global = vim.g
 local opt = vim.opt
+local buffer = vim.b
 
 --
 -- 文件编码, 外观终端真颜色
 --
-vim.g.encoding = "UTF-8"
+global.encoding = "UTF-8"
 opt.fileencoding = "UTF-8"
 opt.termguicolors = true
 opt.background = "dark"
@@ -14,7 +16,7 @@ opt.background = "dark"
 --
 opt.relativenumber=true
 opt.number=true
--- opt.cursorline = true
+opt.cursorline = true
 
 
 -- 
@@ -68,6 +70,13 @@ opt.sidescrolloff = 10
 
 
 --
+-- undo file
+--
+opt.undofile = true
+opt.undodir = vim.fn.expand('$HOME/.local/share/nvim/undo')
+
+
+--
 -- 其他配置
 --
 -- 命令行高为2，提供足够的显示空间
@@ -94,7 +103,8 @@ opt.whichwrap = 'b,s,<,>,[,],h,l'
 -- 允许隐藏被修改过的buffer
 opt.hidden = true
 -- 自动补全不自动选中
-vim.g.completeopt = "menu,menuone,noselect,noinsert"
+opt.completeopt = { "menu", "menuone", "noselect", "noinsert" }
+-- global.completeopt = "menu,menuone,noselect,noinsert"
 -- 不可见字符的显示，这里只把空格显示为一个点
 -- opt.list = true
 -- opt.listchars = "space:·"
