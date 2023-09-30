@@ -1,3 +1,7 @@
+--
+-- Vim Online Doc 
+-- https://vimcdoc.sourceforge.net/doc/help.html
+--
 require("core.options")
 require("core.keymaps")
 
