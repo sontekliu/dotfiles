@@ -26,9 +26,9 @@ keymap.set("", "s<up>", "<C-w>k") --  s + 上箭头 光标移动到上面窗口
 keymap.set("", "s<down>", "<C-w>j") --  s + 下箭头 光标移动到下面窗口
 keymap.set("", "s<right>", "<C-w>l") --  s + 右箭头 光标移动到右边窗口
 keymap.set("", "sh", "<C-w>h") --  s + h 光标移动到右边窗口
-keymap.set("", "sk", "<C-w>k") --  s + 右箭头 光标移动到右边窗口
-keymap.set("", "sj", "<C-w>j") --  s + 右箭头 光标移动到右边窗口
-keymap.set("", "sl", "<C-w>l") --  s + 右箭头 光标移动到右边窗口
+keymap.set("", "sk", "<C-w>k") --  s + k 光标移动到右边窗口
+keymap.set("", "sj", "<C-w>j") --  s + j 光标移动到右边窗口
+keymap.set("", "sl", "<C-w>l") --  s + l 光标移动到右边窗口
 
 -- Resize window
 keymap.set("n", "<C-w><left>", "<C-w><")
