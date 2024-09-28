@@ -106,10 +106,12 @@ source $ZSH/oh-my-zsh.sh
 alias vim=nvim
 alias cddwm="cd ~/myconfig/dwm"
 alias cdst="cd ~/myconfig/st"
+alias i3lock="$DWM/script/i3lock.sh"
 
 export JAVA_HOME=~/workspace/jdk-17
 export MAVEN_HOME=~/workspace/apache-maven-3.9.9
 export GRADE_HOME=~/workspace/gradle-7.2
+export DWM=~/myconfig/dwm
 export PATH=$PATH:$JAVA_HOME/bin:$MAVEN_HOME/bin
 
 
