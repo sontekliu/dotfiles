@@ -1,0 +1,39 @@
+! dracula
+*.color0: #000000
+*.color1: #ff5555
+*.color2: #50fa7b
+*.color3: #f1fa8c
+*.color4: #bd93f9
+*.color5: #ff79c6
+*.color6: #8be9fd
+*.color7: #bbbbbb
+*.color8: #44475a
+*.color9: #ff5555
+*.color10: #50fa7b
+*.color11: #f1fa8c
+*.color12: #bd93f9
+*.color13: #ff79c6
+*.color14: #8be9fd
+*.color15: #ffffff
+*.color256: #282a36
+*.color257: #f8f8f2
+*.color258: #f8f8f2
+
+
+
+! rofi config
+rofi.color-enabled: true
+rofi.color-window: #272827, #13bf9d, #13bf9d
+rofi.color-normal: #272827, #657b83, #272827, #272827, #13bf9d
+rofi.color-active: #272827, #657b83, #272827, #272827, #13bf9d
+rofi.color-urgent: #272827, #657b83, #272827, #272827, #13bf9d
+
+rofi.separator-style: solid
+rofi.sidebar-mode: false
+rofi.lines: 5
+rofi.font: Monaco 12
+rofi.bw: 1
+rofi.columns: 2
+rofi.padding: 5
+rofi.fixed-num-lines: true
+rofi.hide-scrollbar: true
