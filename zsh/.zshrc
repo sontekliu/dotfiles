@@ -1,51 +1,39 @@
 # If you come from bash you might have to change your $PATH.
-export M2_HOME="$HOME/workspace/apache-maven-3.5.0"
-# export GRADLE_HOME="$HOME/workspace/gradle-4.10"
-export GRADLE_HOME="$HOME/workspace/gradle-7.2"
-export GRADLE_USER_HOME="$HOME/workspace/repo"
-# export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home"
-export JAVA_HOME="/Users/sontek/workspace/jdk-17.0.1.jdk/Contents/Home"
-export ES_HOME="$HOME/opt/myapp/elasticsearch-7.10.2"
-export CLASSPATH=.:$JAVA_HOME/lib:$JAVA_HOME/jre/lib
-export KOTLIN_HOME="$HOME/workspace/mysoftware/kotlinc"
-export GOROOT="$HOME/go"
-export GOPATH="$HOME/workspace/goprojects"
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-export FLUTTER_HOME="$HOME/workspace/flutter"
-export PUB_HOSTED_URL=https://pub.flutter-io.cn
-export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
-export POSTMAN_DISABLE_GPU=true
+# Path to your Oh My Zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
 
-export PATH=$POSTMAN_DISABLE_GPU:$FLUTTER_HOME/bin:$GOROOT/bin:$JAVA_HOME/bin:$GRADLE_HOME/bin:$M2_HOME/bin:$KOTLIN_HOME/bin:$ES_HOME/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
-
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/sontek/.oh-my-zsh
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time Oh My Zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="ys"
 
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -57,6 +45,9 @@ ZSH_THEME="ys"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -66,33 +57,27 @@ ZSH_THEME="ys"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  vi-mode
-  # extract
-  # autojump
-  # colored-man-pages
-  # sudo
-  # z
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export MANPATH="/usr/local/man:$MANPATH"
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -101,51 +86,37 @@ export MANPATH="/usr/local/man:$MANPATH"
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch $(uname -m)"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-set -o vi
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-# alias vi='nvim'
-alias vim='nvim'
-alias python='/usr/local/bin/python3'
-alias pip='/usr/local/bin/pip3'
-alias blj='/Users/sontek/.ssh/login.sh'
+# 以下是自定义配置
+alias vim=nvim
+alias cddwm="cd ~/myconfig/dwm"
+alias cdst="cd ~/myconfig/st"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export JAVA_HOME=~/workspace/jdk-17
+export MAVEN_HOME=~/workspace/apache-maven-3.9.9
+export GRADE_HOME=~/workspace/gradle-7.2
+export PATH=$PATH:$JAVA_HOME/bin:$MAVEN_HOME/bin
 
-function proxy_off(){
-    unset http_proxy
-    unset https_proxy
-    echo -e "已关闭代理"
-}
 
-function proxy_on() {
-    # export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-    export http_proxy="socks5://127.0.0.1:1080"
-    export https_proxy=$http_proxy
-    echo -e "已开启代理"
-}
 
-alias lg="lazygit"
 
-export NVM_DIR="/Users/sontek/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-export HOMEBREW_GITHUB_API_TOKEN=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
-___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+
+
+
+
 
