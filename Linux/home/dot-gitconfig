@@ -1,0 +1,40 @@
+[color]
+	diff = auto
+	ui = auto
+	status = auto
+	branch = auto
+[user]
+	name = sontekliu
+	email = sontek@yeah.net
+[core]
+	editor = vim
+	autocrlf = input
+[merge]
+	tool = vimdiff
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	ui = !gitk
+    lg = "log --graph --color --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cblue %s %Cgreen[%cd] %C(bold blue)<%an-%ae>%Creset' --abbrev-commit"
+    lss = "log --color --name-status --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cblue %s %Cgreen[%cd] %C(bold blue)<%an-%ae>%Creset' --abbrev-commit"
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[http]
+	postBuffer = 524288000
+[https]
+	postBuffer = 524288000
+[includeIf "gitdir:~/workspace/sxf_project/"]
+    path = ~/workspace/sxf_project/.gitconfig
+[init]
+	defaultBranch = master
+[safe]
+	directory = /usr/local/Homebrew
+	directory = /usr/local/Homebrew
+	directory = /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/
+	directory = /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/
+	directory = /usr/local/Homebrew/Library/Taps/homebrew/homebrew-services/
