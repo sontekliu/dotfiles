@@ -1,5 +1,0 @@
-{
-    "suggest.autoTrigger": "always",
-    "suggest.timeout": 500,
-    "suggest.minTriggerInputLength": 1
-}
