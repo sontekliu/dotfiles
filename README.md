@@ -86,3 +86,4 @@ example
 
 sudo dd if=./manjaro-i3-18.1.0-x86_64.iso of=/dev/sdb bs=4M
 
+aa
