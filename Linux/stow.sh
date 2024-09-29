@@ -1,3 +1,3 @@
 #!/bin/bash
 
-stow -t ~ --dotfiles home rofi
+stow -t ~ --dotfiles home rofi alacritty
