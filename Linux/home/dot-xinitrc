@@ -56,6 +56,11 @@ exec /usr/bin/v2ray run -config /home/laoliu/.config/v2ray/config.json &
 # 配置透明
 # picom -b
 
+# IDEA 显示工具栏
+export _JAVA_AWT_WM_NONREPARENTING=1
+export AWT_TOOLKIT=MToolkit
+wmname LG3D
+
 # 显示状态栏
 exec slstatus &
 
