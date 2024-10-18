@@ -30,7 +30,7 @@ TERM = "xterm-256color"
 # Neither borders nor title bar.
 # Title bar, transparent background and title bar buttons.
 # Title bar, transparent background and no title bar buttons.
-decorations = "Full" 
+decorations = "None" 
 dynamic_padding = false
 opacity = 0.93
 dynamic_title = true
@@ -42,22 +42,22 @@ y = 5
 
 # 字体设置
 [font]
-size = 16.0
+size = 12.0
 
 [font.normal]
-family = "Hack Nerd Font Mono"
+family = "monospace"
 style = "Regular"
 
 [font.italic]
-family = "Hack Nerd Font Mono"
+family = "monospace"
 style = "Italic"
 
 [font.bold]
-family = "Hack Nerd Font Mono"
+family = "monospace"
 style = "Bold"
 
 [font.bold_italic]
-family = "Hack Nerd Font Mono"
+family = "monospace"
 style = "Bold Italic"
 
 [cursor]

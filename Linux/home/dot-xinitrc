@@ -46,6 +46,11 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
+export LANG=zh_CN.UTF-8
+export LANGUAGE=zh_CN:en_US
+export LC_TYPE=zh_CN.UTF-8
+
+
 exec /usr/bin/v2ray run -config /home/laoliu/.config/v2ray/config.json &
 # 中文输入法
 # fcitx5 &
