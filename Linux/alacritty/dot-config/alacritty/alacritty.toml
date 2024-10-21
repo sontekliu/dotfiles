@@ -45,7 +45,8 @@ y = 5
 size = 12.0
 
 [font.normal]
-family = "monospace"
+# family = "monospace"
+family = "Liberation Mono"
 style = "Regular"
 
 [font.italic]
@@ -53,11 +54,13 @@ family = "monospace"
 style = "Italic"
 
 [font.bold]
-family = "monospace"
+# family = "monospace"
+family = "Liberation Mono"
 style = "Bold"
 
 [font.bold_italic]
-family = "monospace"
+# family = "monospace"
+family = "Liberation Mono"
 style = "Bold Italic"
 
 [cursor]
