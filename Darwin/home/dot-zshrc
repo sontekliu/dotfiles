@@ -71,7 +71,11 @@ ZSH_THEME="ys"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,16 +108,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # 以下是自定义配置
 
-export JAVA_HOME=~/workspace/jdk-17
+export JAVA_HOME=~/workspace/jdk-17/Contents/Home
 export MAVEN_HOME=~/workspace/apache-maven-3.9.9
-export GRADE_HOME=~/workspace/gradle-7.2
-export DWM=~/myconfig/dwm
-export PATH=$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH
+export GRADLE_HOME=~/workspace/gradle-7.2
+export PATH=~/workspace/nvim-macos-x86_64/bin:$PATH
+export PATH=$JAVA_HOME/bin:$MAVEN_HOME/bin:$GRADLE_HOME/bin:$PATH
 
 alias vim=nvim
 alias cddwm="cd ~/myconfig/dwm"
 alias cdst="cd ~/myconfig/st"
 alias i3lock="$DWM/script/i3lock.sh"
+
+alias proxy='export all_proxy=socks5://127.0.0.1:1080'
 
 
 
